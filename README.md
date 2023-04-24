@@ -2,16 +2,20 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This is a way of writing TypeScript inside of HTML File and the steps for create a file like this is as follows:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+- make sure nodejs is installed on your computer
+- npm init -y
+- npm install snowpack
+- npx snowpack init
+- npm install @snowpack/plugin-typescript
+- npm install typescript
+- npx tsc --init
 
-## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## changes to make to your packages.json
+
+The scripts should be as follow:
 
 - [Installation](#installation)
 - [Usage](#usage)
