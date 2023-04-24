@@ -17,7 +17,9 @@ This is a way of writing TypeScript inside of HTML File and the steps for create
 
 The scripts should be as follow:
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+- "start":"snowpack dev",
+- "build":"snowpack build"
+
+## To run the App, run the command on the CLI
+
+- npm run start
