@@ -49,3 +49,93 @@ function wrapInArray(obj: string | string[]) {
   }
 
   wrapInArray(['taiwo'])
+
+
+  const car:[
+    Type:string,
+     plateNumber:number,
+     year?:number
+  ]= ['rangeRover',2,2002 ]
+  console.log(car);
+  
+
+  const magics ={
+    _add: async (): Promise<void> => {
+      try {
+        console.log('this is not an error');
+      } catch (error) {
+        console.log('this is an error');
+        
+      }
+    },
+    get add() {
+      return this._add;
+    },
+    set add(value) {
+      this._add = value;
+    },
+  }
+
+  magics.add()
+
+
+  // //// ENUM
+  enum StatusCodes {
+    NotFound = 404,
+    Success = 200,
+    Accepted = 202,
+    BadRequest = 400
+  }
+  console.log({
+    notFound: StatusCodes.NotFound,
+    success: StatusCodes.Success,
+  });
+  
+
+
+  // ////// interfaces
+  interface Rectangle {
+    height:number,
+    width:number
+  }
+
+
+  const dimensions: Rectangle = {
+    height : 293,
+    width : 3648
+  }
+
+  console.log(dimensions);
+
+
+
+  // //// extending interfaces
+  interface newRectangle extends Rectangle {
+    colors: string
+  }
+
+
+  const latestShape : newRectangle ={
+    height : 235,
+    width : 235,
+    colors: 'red'
+  }
+
+
+  //////// UNION 
+  const methods = {
+    printStatusCode: async (code: string | number) => {
+      if(typeof code === 'string'){
+        console.log('the status code of this function is '+code.toUpperCase());
+        return;
+      }
+      console.log('the status code of this function is '+code);
+      
+    }
+  }
+  methods.printStatusCode('305')
+
+
+
+  // //// FUNCTIONS
+  
