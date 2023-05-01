@@ -198,7 +198,6 @@ console.log(multiply(2, 3));
 
 
 
-
 // ---> method 2
 interface Multiply {
   a: number,
