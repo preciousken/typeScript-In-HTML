@@ -194,31 +194,31 @@ function multiply(a: number, b: number): string {
   let result = `${a * b}` // made it to give a string result instead of a number. though it received a number parameter
   return result
 }
-console.log(multiply(2,3));
+console.log(multiply(2, 3));
 
 
 
 
 // ---> method 2
 interface Multiply {
-  a:number,
-  b:number
+  a: number,
+  b: number
 }
 
-function multiply2({a,b}:Multiply): number {
-  let result =a * b // made it to give a string result instead of a number. though it received a number parameter
+function multiply2({ a, b }: Multiply): number {
+  let result = a * b // made it to give a string result instead of a number. though it received a number parameter
   return result
 }
-console.log(multiply(2,3));
+console.log(multiply(2, 3));
 
 
 
 // ///// OPTIONAL
-function Add (a: number,b: number,c?:number):number{
-  return a* b+ (c || 0)
+function Add(a: number, b: number, c?: number): number {
+  return a * b + (c || 0)
 }
 
-console.log(Add(1,3,5));
+console.log(Add(1, 3, 5));
 
 
 
@@ -237,3 +237,45 @@ const y: number = 123456789;
 const newY = (y as unknown) as string
 console.log(newY);
 
+
+
+// //// TYPESCRIPT CLASSES
+class Person {
+  name: string;
+  school: string
+
+  public constructor(name: string, school: string) {
+    this.name = name;
+    this.school = school
+  }
+
+  public getName(): [string] {
+    return [this.school]
+  }
+}
+
+const _person = new Person("Jane", 'fedeeral university of technology, Akure');
+console.log(_person.getName()); // person.name isn't accessible from outside the class since it's private
+
+
+
+class NewPerson {
+  age: number | undefined;
+  name: string
+  constructor(name: string, age?: number) {
+    this.name = name,
+    this.age = age
+
+    this.declareHim()
+  }
+
+
+  declareHim(){
+    console.log(this.name+" is "+this.age+" years old");
+  }
+
+}
+
+const declaredPerson = new NewPerson('Kehinde',21)
+
+console.log(declaredPerson);
